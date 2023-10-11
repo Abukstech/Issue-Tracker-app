@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className=" space-x-5">
       <body className={inter.className}>
         <Theme>
           <NavBar />
