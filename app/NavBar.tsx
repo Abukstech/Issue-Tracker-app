@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import clasnames from "classnames";
+import { AiFillBug } from "react-icons/ai";
 
 const NavBar = () => {
   const currentpage = usePathname();
@@ -14,7 +15,9 @@ const NavBar = () => {
 
   return (
     <nav className="flex space-x-6 border-b mb-5 px-6 h-14 items-center">
-      <Link href="/">Logo</Link>
+      <Link href="/">
+        <AiFillBug />
+      </Link>
       <ul className="flex space-x-6">
         {links.map((link) => (
           <Link
