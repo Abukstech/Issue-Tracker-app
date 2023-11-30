@@ -4,7 +4,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import { Inter } from "next/font/google";
-import { Theme, ThemePanel } from "@radix-ui/themes";
+import { Container, Theme, ThemePanel } from "@radix-ui/themes";
 import NavBar from "./NavBar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -20,11 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className=" space-x-5">
+    <html lang="en" className="space-x-5">
       <body className={inter.variable}>
         <Theme appearance="light" accentColor="violet">
           <NavBar />
-          <main>{children}</main>
+          <main>
+            <Container>{children}</Container>
+          </main>
         </Theme>
       </body>
     </html>
