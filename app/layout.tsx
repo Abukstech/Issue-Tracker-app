@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="space-x-5">
+    <html lang="en">
       <body className={inter.variable}>
         <Theme appearance="light" accentColor="violet">
           <AuthProvider>
